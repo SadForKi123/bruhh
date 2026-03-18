@@ -1,0 +1,213 @@
+/* ===== HỆ THỐNG QUẢN LÝ SINH VIÊN - MAIN CSS ===== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 14px;
+    background: #f0f2f5;
+    color: #333;
+}
+
+/* ── Layout ── */
+.wrapper { display: flex; min-height: 100vh; flex-direction: column; }
+
+/* ── Header ── */
+.header {
+    background: #2c6fad;
+    color: white;
+    padding: 14px 24px;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 6px rgba(0,0,0,.3);
+}
+
+/* ── Body layout ── */
+.body-container { display: flex; flex: 1; }
+
+/* ── Sidebar ── */
+.sidebar {
+    width: 200px;
+    background: #2c6fad;
+    min-height: calc(100vh - 52px);
+    padding-top: 8px;
+    flex-shrink: 0;
+}
+.sidebar a {
+    display: block;
+    color: #cde;
+    text-decoration: none;
+    padding: 14px 20px;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+    transition: background .2s;
+    font-size: 14px;
+}
+.sidebar a:hover, .sidebar a.active {
+    background: rgba(255,255,255,.15);
+    color: #fff;
+}
+
+/* ── Main content ── */
+.main-content { flex: 1; padding: 24px; }
+
+/* ── Card ── */
+.card {
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0,0,0,.12);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.card-header {
+    font-size: 15px;
+    font-weight: bold;
+    color: #2c6fad;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e8eef5;
+}
+
+/* ── Search bar ── */
+.search-bar {
+    background: #dce8f5;
+    border-radius: 6px;
+    padding: 14px 16px;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.search-bar label { font-weight: 600; font-size: 13px; color: #2c6fad; }
+.search-bar input, .search-bar select {
+    padding: 7px 10px;
+    border: 1px solid #b0c8e0;
+    border-radius: 4px;
+    font-size: 13px;
+    min-width: 140px;
+}
+.search-bar .total-badge {
+    background: #2c6fad;
+    color: white;
+    padding: 7px 16px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+/* ── Buttons ── */
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    text-decoration: none;
+    transition: opacity .2s;
+}
+.btn:hover { opacity: .85; }
+.btn-primary   { background: #2c6fad; color: white; }
+.btn-success   { background: #28a745; color: white; }
+.btn-warning   { background: #ffc107; color: #333; }
+.btn-danger    { background: #dc3545; color: white; }
+.btn-secondary { background: #6c757d; color: white; }
+.btn-sm { padding: 4px 10px; font-size: 12px; }
+
+/* ── Table ── */
+.table-wrapper { overflow-x: auto; }
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+table th {
+    background: #2c6fad;
+    color: white;
+    padding: 10px 12px;
+    text-align: left;
+    white-space: nowrap;
+}
+table td {
+    padding: 9px 12px;
+    border-bottom: 1px solid #e8eef5;
+    vertical-align: middle;
+}
+table tr:hover td { background: #f5f9ff; }
+table tr:nth-child(even) td { background: #fafcff; }
+table tr:nth-child(even):hover td { background: #f0f7ff; }
+
+/* ── Form ── */
+.form-group { margin-bottom: 16px; }
+.form-group label { display: block; font-weight: 600; margin-bottom: 5px; color: #444; }
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 9px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color .2s;
+}
+.form-group input:focus, .form-group select:focus {
+    outline: none;
+    border-color: #2c6fad;
+    box-shadow: 0 0 0 3px rgba(44,111,173,.15);
+}
+.form-row { display: flex; gap: 16px; flex-wrap: wrap; }
+.form-row .form-group { flex: 1; min-width: 200px; }
+.form-actions { display: flex; gap: 10px; margin-top: 20px; }
+
+/* ── Dashboard stats ── */
+.stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin-bottom: 24px; }
+.stat-card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,.1);
+    border-top: 4px solid #2c6fad;
+}
+.stat-card .num { font-size: 36px; font-weight: bold; color: #2c6fad; }
+.stat-card .lbl { font-size: 13px; color: #666; margin-top: 4px; }
+
+/* ── Alerts ── */
+.alert {
+    padding: 12px 16px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    font-size: 14px;
+}
+.alert-success { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+.alert-danger  { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+.alert-info    { background: #d1ecf1; color: #0c5460; border: 1px solid #bee5eb; }
+
+/* ── Footer ── */
+.footer {
+    background: #e8eef5;
+    text-align: center;
+    padding: 12px;
+    color: #666;
+    font-size: 12px;
+    border-top: 1px solid #d0dce8;
+}
+
+/* ── Icon buttons ── */
+.icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px 6px;
+    border-radius: 3px;
+    font-size: 16px;
+    transition: background .2s;
+}
+.icon-btn:hover { background: #e8eef5; }
+.icon-btn.edit  { color: #2c6fad; }
+.icon-btn.del   { color: #dc3545; }
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+    .sidebar { width: 100%; min-height: auto; }
+    .body-container { flex-direction: column; }
+    .search-bar { flex-direction: column; align-items: flex-start; }
+    .form-row { flex-direction: column; }
+}
