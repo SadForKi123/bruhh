@@ -75,14 +75,14 @@
                     <input type="password" name="matKhau" id="matKhau" required
                            placeholder="Nhập mật khẩu..." autocomplete="current-password">
                     <button type="button" class="show-pw" onclick="togglePw('matKhau','eyeIcon')">
-                        <span id="eyeIcon">👁️</span>
+
                     </button>
                 </div>
             </div>
 
             <div class="remember-row">
                 <label><input type="checkbox" name="remember"> Ghi nhớ đăng nhập</label>
-                <a href="${pageContext.request.contextPath}/doimatkhau">Đổi mật khẩu?</a>
+
             </div>
 
             <button type="submit" class="btn-login">🔐 ĐĂNG NHẬP</button>
@@ -105,7 +105,7 @@ function togglePw(fieldId, iconId) {
         icon.textContent = '🙈';
     } else {
         field.type = 'password';
-        icon.textContent = '👁️';
+        icon.textContent = ' ';
     }
 }
 </script>
