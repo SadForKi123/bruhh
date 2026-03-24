@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class DBConnection {
 
     private static final String URL =
-            "jdbc:sqlserver://localhost\\SQLEXPRESS:1433"
+            "jdbc:sqlserver://192.168.1.32:1433"
                     + ";databaseName=QuanLySinhVien"
                     + ";encrypt=true"
                     + ";trustServerCertificate=true"
